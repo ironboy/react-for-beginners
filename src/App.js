@@ -7,11 +7,11 @@ import GoodThing from './GoodThing';
 export default () => {
 
   let goodThings = [
-    'Food',
-    'Coffee',
-    'Programming',
-    'Cats',
-    'Music'
+    {name: 'Food', prio: 5},
+    {name: 'Coffee', prio: 4},
+    {name: 'Programming', prio: 2},
+    {name: 'My kids', prio: 1},
+    {name: 'Music', prio: 3}
   ];
 
   return (
@@ -19,7 +19,11 @@ export default () => {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         {goodThings.map((thing, index) => (
-          <GoodThing key={index} name={thing} />
+          <GoodThing 
+            key={index} 
+            name={thing.name}
+            prio = {thing.prio}
+          />
         ))}
       </header>
     </div>

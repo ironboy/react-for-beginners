@@ -4,7 +4,8 @@ export default props => {
   console.log(props);
   return (
     <p>
-      {props.name}
+      <span>{props.name}</span>
+      {props.prio}
     </p>
   )
 }
