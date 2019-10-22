@@ -37,7 +37,7 @@ button:hover {
 }
 
 
-.good-thing button {
+.good-thing button, form button {
   margin-left: 20px;
   padding: 1px 5px;
   font-size: 80%;

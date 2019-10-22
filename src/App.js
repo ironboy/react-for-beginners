@@ -45,10 +45,20 @@ export default () => {
   }
 
   const makeChange = (id, name, prio) => {
-    // logic to come
+    // find the thing to change
+    let theThing = goodThings.filter(thing => thing.id === id)[0];
+    // set the new values
+    theThing.name = name;
+    theThing.prio = prio;
+    // close/remove the edit form
+    setEditId(null);
   }
 
-  const cancelEdit = () => setEditId(null);
+  const cancelEdit = e => {
+    e.preventDefault();
+    // close/remove the edit form
+    setEditId(null);
+  }
   
   return (
     <div className="App">
