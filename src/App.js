@@ -21,8 +21,7 @@ export default () => {
         {goodThings.map((thing, index) => (
           <GoodThing 
             key={index} 
-            name={thing.name}
-            prio = {thing.prio}
+            {...thing}
           />
         ))}
       </header>
