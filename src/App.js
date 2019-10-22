@@ -17,11 +17,15 @@ export default () => {
 
   const sort = () => {
     // change the sortOrder and sort according to it
-    setSortOrder(sortOrder !== 'ascending' ? 'ascending' : 'descending');
-    let [x, y] = sortOrder === 'ascending' ? [-1, 1] : [1, -1];
+    // using a newSortOrder variable since a setSortOrder
+    // does not change sortOrder directly (first after rendering)
+    let newSortOrder = sortOrder !== 'ascending' ?
+      'ascending' : 'descending';
+    let [x, y] = newSortOrder === 'ascending' ? [-1, 1] : [1, -1];
     setGoodThings(
       [...goodThings].sort((a, b) => a.prio < b.prio ? x : y)
     );
+    setSortOrder(newSortOrder);
   };
 
   return (
