@@ -20,3 +20,8 @@
 .App-link {
   color: #09d3ac;
 }
+
+.good-thing span {
+  display: inline-block;
+  width: 300px;
+}
