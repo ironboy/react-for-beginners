@@ -35,3 +35,10 @@ button {
 button:hover {
   background-color: #ddd;
 }
+
+
+.good-thing button {
+  margin-left: 20px;
+  padding: 1px 5px;
+  font-size: 80%;
+}
