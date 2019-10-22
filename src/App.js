@@ -1,5 +1,4 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 
 import GoodThing from './GoodThing';
@@ -19,7 +18,7 @@ export default () => {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+        <button>Sort</button>
         {goodThings.map((thing, index) => (
           <GoodThing 
             key={index} 

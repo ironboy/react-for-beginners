@@ -25,3 +25,13 @@
   display: inline-block;
   width: 300px;
 }
+
+button {
+  padding: 7px 20px;
+  font-size: 120%;
+  border-radius: 3px;
+}
+
+button:hover {
+  background-color: #ddd;
+}
