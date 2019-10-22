@@ -1,21 +1,26 @@
 [
   {
+    "id": 6,
     "name": "Food",
     "prio": 5
   },
   {
+    "id": 7,
     "name": "Coffee",
     "prio": 4
   },
   {
+    "id": 8,
     "name": "Programming",
     "prio": 2
   },
   {
+    "id": 9,
     "name": "My kids",
     "prio": 1
   },
   {
+    "id": 10,
     "name": "Music",
     "prio": 3
   }

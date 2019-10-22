@@ -3,7 +3,10 @@ import React from 'react';
 export default props => {
 
   const edit = () => {
-    console.log('You clicked edit!');
+    // I can call the component above me
+    // because it gave me a function to call
+    // amongst my props
+    props.editAThing(props.id);
   }
 
   return (

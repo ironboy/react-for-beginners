@@ -2,11 +2,13 @@ import React, { useState, useEffect } from 'react';
 import './App.css';
 
 import GoodThing from './GoodThing';
+import EditThing from './EditThing';
 
 export default () => {
 
   const [goodThings, setGoodThings] = useState([]);
   const [sortOrder, setSortOrder] = useState('unsorted');
+  const [editId, setEditId] = useState(null);
 
   const getData = async () => {
     // wait until we have the raw data from the resource
@@ -38,6 +40,16 @@ export default () => {
     setSortOrder(newSortOrder);
   };
 
+  const editAThing = (id) => {
+    setEditId(id);
+  }
+
+  const makeChange = (id, name, prio) => {
+    // logic to come
+  }
+
+  const cancelEdit = () => setEditId(null);
+  
   return (
     <div className="App">
       <header className="App-header">
@@ -47,12 +59,18 @@ export default () => {
             'Sort least important first'
           }
         </button>
-        {goodThings.map((thing, index) => (
-          <GoodThing
-            key={index}
-            {...thing}
-          />
-        ))}
+        {goodThings.map(thing =>
+          thing.id !== editId ? (
+            <GoodThing
+              key={thing.id}
+              {...{...thing, editAThing}}
+            />) : (
+            <EditThing 
+              key={thing.id}
+              {...{...thing, makeChange, cancelEdit}}
+            />
+          )
+        )}
       </header>
     </div>
   );
