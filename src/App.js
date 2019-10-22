@@ -14,6 +14,8 @@ export default () => {
     {name: 'Music', prio: 3}
   ];
 
+  goodThings.sort((a, b) =>  a.prio < b.prio ? -1 : 1);
+
   return (
     <div className="App">
       <header className="App-header">
